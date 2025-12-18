@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  # Nombre único para el despliegue del Gateway
+  name: api-gateway 
+spec:
+  replicas: 1 # Un Gateway suele ser suficiente, pero puedes subirlo a 2 si hay mucho tráfico
+  selector:
+    matchLabels:
+      app: api-gateway
+  template:
+    metadata:
+      labels:
+        app: api-gateway
+    spec:
+      containers:
+      - name: api-gateway-container
+        # Imagen específica para el Gateway configurada en el CI
+        image: euler09/api-gateway:latest 
+        ports:
+        - containerPort: 8080
+        # El Gateway no necesita cadena de conexión a base de datos, 
+        # solo su configuración ocelot.json que ya va dentro de la imagen.
+---
+apiVersion: v1
+kind: Service
+metadata:
+  # Este nombre debe coincidir con el usado en tu archivo desplegar.yml
+  name: api-gateway-service
+spec:
+  selector:
+    app: api-gateway
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  # AWS generará la URL MAESTRA para este servicio
+  type: LoadBalancer

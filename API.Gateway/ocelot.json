@@ -5,8 +5,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5041
+          "Host": "a759425cff49c409183e38aa527d560e-233742931.us-east-1.elb.amazonaws.com",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/obtenerProductos",
@@ -17,8 +17,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5041
+          "Host": "a759425cff49c409183e38aa527d560e-233742931.us-east-1.elb.amazonaws.com",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/obtenerPor/{id}",
@@ -29,8 +29,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5041
+          "Host": "a759425cff49c409183e38aa527d560e-233742931.us-east-1.elb.amazonaws.com",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/Category/GetAllCategories",
@@ -41,59 +41,11 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5041
+          "Host": "a759425cff49c409183e38aa527d560e-233742931.us-east-1.elb.amazonaws.com",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/Product/GetProductsByCategory/{idCategory}",
-      "UpstreamHttpMethod": [ "GET" ]
-    },
-    {
-      "DownstreamPathTemplate": "/UserManagement/RegisterUser",
-      "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 7214
-        }
-      ],
-      "UpstreamPathTemplate": "/UserManagement/RegisterUser",
-      "UpstreamHttpMethod": [ "POST" ]
-    },
-    {
-      "DownstreamPathTemplate": "/UserManagement/Login",
-      "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 7214
-        }
-      ],
-      "UpstreamPathTemplate": "/UserManagement/Login",
-      "UpstreamHttpMethod": [ "POST" ]
-    },
-    {
-      "DownstreamPathTemplate": "/Cart/addItem",
-      "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 7281
-        }
-      ],
-      "UpstreamPathTemplate": "/Cart/addItem",
-      "UpstreamHttpMethod": [ "POST" ]
-    },
-    {
-      "DownstreamPathTemplate": "/Cart/items/{userId}",
-      "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 7281
-        }
-      ],
-      "UpstreamPathTemplate": "/Cart/items/{userId}",
       "UpstreamHttpMethod": [ "GET" ]
     },
     {
@@ -101,8 +53,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5041
+          "Host": "a759425cff49c409183e38aa527d560e-233742931.us-east-1.elb.amazonaws.com",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/Product/filtros-catalogo",
@@ -113,20 +65,44 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5041
+          "Host": "a759425cff49c409183e38aa527d560e-233742931.us-east-1.elb.amazonaws.com",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/Product/filter",
       "UpstreamHttpMethod": [ "POST" ]
     },
     {
-      "DownstreamPathTemplate": "/Cart/deleteItem/{idCartItem}",
-      "DownstreamScheme": "https",
+      "DownstreamPathTemplate": "/Cart/addItem",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 7281
+          "Host": "adc6e664211de4e6a90607d3a38dd7cc-715092432.us-east-1.elb.amazonaws.com",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/Cart/addItem",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/Cart/items/{userId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "adc6e664211de4e6a90607d3a38dd7cc-715092432.us-east-1.elb.amazonaws.com",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/Cart/items/{userId}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/Cart/deleteItem/{idCartItem}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "adc6e664211de4e6a90607d3a38dd7cc-715092432.us-east-1.elb.amazonaws.com",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/Cart/deleteItem/{idCartItem}",
@@ -134,35 +110,35 @@
     },
     {
       "DownstreamPathTemplate": "/Cart/UpdateQuantity",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 7281
+          "Host": "adc6e664211de4e6a90607d3a38dd7cc-715092432.us-east-1.elb.amazonaws.com",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/Cart/UpdateQuantity",
       "UpstreamHttpMethod": [ "PUT" ]
     },
     {
-      "DownstreamPathTemplate": "/UserManagement/ProfileUser/{id}",
-      "DownstreamScheme": "https",
+      "DownstreamPathTemplate": "/Cart/GetCartItemsFilled/{idCart}",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 7214
+          "Host": "adc6e664211de4e6a90607d3a38dd7cc-715092432.us-east-1.elb.amazonaws.com",
+          "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/UserManagement/ProfileUser/{id}",
+      "UpstreamPathTemplate": "/Cart/GetCartItemsFilled/{idCart}",
       "UpstreamHttpMethod": [ "GET" ]
     },
     {
       "DownstreamPathTemplate": "/Sale/process-payment",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 7057
+          "Host": "a82fedf0ff8aa44a8a0e2fc406460939-452633654.us-east-1.elb.amazonaws.com",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/Sale/process-payment",
@@ -170,30 +146,52 @@
     },
     {
       "DownstreamPathTemplate": "/Sale/orders/{idUserAccount}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 7057
+          "Host": "a82fedf0ff8aa44a8a0e2fc406460939-452633654.us-east-1.elb.amazonaws.com",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/Sale/orders/{idUserAccount}",
       "UpstreamHttpMethod": [ "GET" ]
     },
-
     {
-      "DownstreamPathTemplate": "/Cart/GetCartItemsFilled/{idCart}",
-      "DownstreamScheme": "https",
+      "DownstreamPathTemplate": "/UserManagement/RegisterUser",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 7281
+          "Host": "aea8ad1c000d24a44bd014c386935d14-1950577243.us-east-1.elb.amazonaws.com",
+          "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/Cart/GetCartItemsFilled/{idCart}",
+      "UpstreamPathTemplate": "/UserManagement/RegisterUser",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/UserManagement/Login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "aea8ad1c000d24a44bd014c386935d14-1950577243.us-east-1.elb.amazonaws.com",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/UserManagement/Login",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/UserManagement/ProfileUser/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "aea8ad1c000d24a44bd014c386935d14-1950577243.us-east-1.elb.amazonaws.com",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/UserManagement/ProfileUser/{id}",
       "UpstreamHttpMethod": [ "GET" ]
     }
-
   ],
   "GlobalConfiguration": {
     "BaseUrl": "http://localhost:5000"
